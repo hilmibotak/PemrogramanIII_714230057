@@ -30,7 +30,10 @@ export function TableWithStripedRows() {
             Swal.fire("Terhapus!", "Data berhasil dihapus.", "success");
             retry(); // refresh data
         } catch  {
-            Swal.fire("Gagal!", "Terjadi kesalahan saat menghapus.", "error");
+            const errorMessage =
+            // eslint-disable-next-line no-undef
+            err?.response?.data?.error || "Terjadi kesalahan saat menghapus.";
+            Swal.fire("Error", errorMessage, "error");
         }
     }
 };

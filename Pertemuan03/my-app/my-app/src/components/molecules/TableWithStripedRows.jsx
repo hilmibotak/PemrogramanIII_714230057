@@ -2,7 +2,7 @@ import { Card, Typography } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const TABLE_HEAD = ["Name", "Job", "Employed", "Address", "Location", ""];
+const TABLE_HEAD = ["Name", "Username", "Email", ""];
 
 export function TableWithStripedRows() {
 
@@ -39,7 +39,7 @@ export function TableWithStripedRows() {
                 </thead>
                 <tbody>
                     {users.length > 0 ? (
-                        users.map((user, index) => (
+                        users.map((user) => (
                             <tr key={user.id} className="even:bg-blue-gray-50/50">
                                 <td className="p-4">
                                     <Typography variant="small" color="blue-gray" className="font-normal">
@@ -54,16 +54,6 @@ export function TableWithStripedRows() {
                                 <td className="p-4">
                                     <Typography variant="small" color="blue-gray" className="font-normal">
                                         {user.email}
-                                    </Typography>
-                                </td>
-                                <td className="p-4">
-                                    <Typography variant="small" color="blue-gray" className="font-normal">
-                                        {user.address.street}
-                                    </Typography>
-                                </td>
-                                <td className="p-4">
-                                    <Typography variant="small" color="blue-gray" className="font-normal">
-                                        {user.address.geo.lng} {user.address.geo.lat}
                                     </Typography>
                                 </td>
                                 <td className="p-4">
@@ -83,5 +73,5 @@ export function TableWithStripedRows() {
                 </tbody>
             </table>
         </Card>
-    );
+    );
 }
