@@ -123,9 +123,9 @@ definitions:
 host: localhost:8088
 info:
   contact:
-    email: indra@ulbi.ac.id
+    email: hilmiromadoni@gmail.com
     name: API Support
-    url: https://github.com/indrariksa
+    url: https://github.com/hilmibotak
   description: This is a sample swagger for Fiber
   title: TES SWAGGER PEMROGRAMAN III
   version: "1.0"

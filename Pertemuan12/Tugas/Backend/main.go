@@ -17,20 +17,23 @@ import (
 )
 
 func init() {
+	if _, err := os.Stat(".env"); err == nil { 
 	err := godotenv.Load()
 	if err != nil {
-		fmt.Println("Failed to load environment variables: ", err)
+		fmt.Println("Gagal memuat file .env:")
+	} else {
+		fmt.Println("File .env dimuat (local)")
 	}
 }
-
+}
 
 // @title TES SWAGGER PEMROGRAMAN III
 // @version 1.0
 // @description This is a sample swagger for Fiber
 
 // @contact.name API Support
-// @contact.url https://github.com/indrariksa
-// @contact.email indra@ulbi.ac.id
+// @contact.url https://github.com/hilmibotak
+// @contact.email hilmiromadoni@gmail.com
 
 // @host localhost:8088
 // @BasePath /

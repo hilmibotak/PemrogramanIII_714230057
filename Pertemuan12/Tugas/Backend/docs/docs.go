@@ -11,8 +11,8 @@ const docTemplate = `{
         "title": "{{.Title}}",
         "contact": {
             "name": "API Support",
-            "url": "https://github.com/indrariksa",
-            "email": "indra@ulbi.ac.id"
+            "url": "https://github.com/hilmibotak",
+            "email": "hilmiromadoni@gmail.com"
         },
         "version": "{{.Version}}"
     },
